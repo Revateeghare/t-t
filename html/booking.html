@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Trip</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    select,
+    input[type="submit"] {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px;
+    }
+
+    input[type="text"]:focus,
+    input[type="date"]:focus,
+    input[type="number"]:focus,
+    select:focus {
+      outline: none;
+      border-color: #1be3e7;
+    }
+
+    input[type="submit"] {
+      background-color: #1be3e7;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0eacb3;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .back-btn,
+    .status-btn {
+      padding: 5px 10px;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .back-btn {
+      background-color: #ccc;
+    }
+
+    .status-btn {
+      background-color: #1be3e7;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Book Your Trip</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <select name="destination" required>
+        <option value="" disabled selected>Select Destination</option>
+        <option value="New York">New York</option>
+        <option value="Paris">Paris</option>
+        <option value="Tokyo">Tokyo</option>
+        <!-- Add more options as needed -->
+      </select>
+      <input type="date" name="date" required>
+      <input type="number" name="participants" placeholder="Number of Participants" required>
+      <input type="submit" value="Book Trip">
+    </form>
+    <div class="buttons">
+      <button class="back-btn" onclick="window.location.href='index.html'">Back</button>
+      <button class="status-btn" onclick="window.location.href='bookingstatus.html'">Booking Status</button>
+    </div>
+  </div>
+
+</body>
+</html>

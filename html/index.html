@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour and Travels</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    nav {
+      background-color: #3b393943;
+      color: #151414;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between; /* Aligning heading and links */
+      align-items: center; /* Aligning items vertically */
+    }
+    .logo {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav a {
+      color: #0c0b0b;
+      text-decoration: none;
+      padding: 10px 5px;
+      font-size: 15px;
+      margin-left: 10px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      background-color: #555;
+      color: white;
+    }
+    .container {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #333;
+    }
+    p {
+      color: #666;
+    }
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .slide {
+      min-width: 100%;
+      overflow: hidden;
+    }
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+    .category-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 20px;
+    }
+    .category {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+    .category:hover {
+      transform: translateY(-5px);
+    }
+    .category h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .category img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .category p {
+      color: #666;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    /* Media Queries */
+    @media only screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        margin: 10px 0;
+      }
+      .container {
+        padding: 0 10px;
+      }
+      .category-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      .category-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* Contact Form Styles */
+    #contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    #contact form {
+      max-width: 400px;
+      width: 100%;
+    }
+    #contact form div {
+      margin-bottom: 10px;
+    }
+    #contact label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #contact textarea {
+      resize: vertical;
+    }
+    #contact button[type="submit"] {
+      background-color: #1be3e7;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #contact button[type="submit"]:hover {
+      background-color: #0eacb3;
+    }
+    h2{
+      text-align: center;
+    }
+    h3{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1 class="logo">Tour and Travels</h1>
+    <div>
+      <a href="#about">About Us</a>
+      <a href="#tours">Tours</a>
+      <a href="#contact">Contact Us</a>
+      <a href="../html/login.html">Login</a>
+      <a href="../html/register.html">Register</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide"><img src="../images/image1.jpeg" alt="Tour and Travels"></div>
+        <div class="slide"><img src="../images/image2.jpeg" alt="Tour and Travels"></div>
+        <div class="slide"><img src="../images/image3.jpeg" alt="Tour and Travels"></div>
+        <!-- Add more slides as needed -->
+      </div>
+    </div>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Welcome to our tour and travels website! We specialize in providing unforgettable travel experiences to various destinations around the world. Our team of experts ensures that every aspect of your journey is taken care of, from booking flights and accommodations to organizing exciting excursions.</p>
+      <p>With years of experience in the travel industry, we have established strong partnerships with airlines, hotels, and local tour operators, allowing us to offer competitive prices and exclusive deals to our customers.</p>
+    </section>
+
+    <section id="tours">
+      <h2>Featured Tours</h2>
+      <div class="category-container">
+        <div class="category">
+          <h3>Adventure Tours</h3>
+          <img src="../images/ad.jpeg" alt="Adventure Tour">
+          <p>Experience the thrill of adventure with our exciting tour packages.</p>
+        </div>
+        <div class="category">
+          <h3>Beach Getaways</h3>
+          <img src="../images/beach.jpeg" alt="Beach Getaways">
+          <p>Relax and unwind on the world's most beautiful beaches.</p>
+        </div>
+        <div class="category">
+          <h3>Cultural Experiences</h3>
+          <img src="../images/ce.jpeg" alt="Cultural Experiences">
+          <p>Immerse yourself in the rich culture and heritage of diverse destinations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or inquiries, feel free to contact us using the form below:</p>
+      <form action="#" method="post">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>If you have any questions or inquiries, feel free to contact us at info@tourtravels.com or 1-800-123-4567.</p>
+    <p>&copy; 2024 Tour and Travels. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const slider = document.querySelector('.slider');
+
+    let index = 0;
+
+    function nextSlide() {
+      index = (index + 1) % slides.length;
+      updateSlider();
+    }
+
+    function updateSlider() {
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+  </script>
+
+</body>
+</html>
